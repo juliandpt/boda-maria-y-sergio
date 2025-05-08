@@ -1,0 +1,25 @@
+{
+  "name": "boda-maria-y-sergio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^7.0.13",
+    "@tailwindcss/vite": "^4.1.5",
+    "astro": "^5.7.12",
+    "svelte": "^5.28.2",
+    "tailwindcss": "^4.1.5",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.26.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
+  }
+}
