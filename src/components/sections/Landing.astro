@@ -1,0 +1,48 @@
+---
+import ImagesRotaion from "@/components/ui/ImagesRotation.astro";
+import { Image } from "astro:assets";
+import myImage from "#/images/mock-image.jpg";
+---
+
+<div class="pt-24 pb-10 px-5">
+  <p>La boda de</p>
+  <h1 class="font-gambarino text-huge normal-case">María & Sergio</h1>
+  <p>5 de septiembre de 2025</p>
+  <a
+    href="https://maps.app.goo.gl/kD1AAbxCrvmczwyX9"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    iglesia Santa María la Antigua, Madrid
+  </a>
+</div>
+
+<ImagesRotaion class="mb-40" />
+
+<div class="py-24 px-5">
+  <h2 class="font-gambarino text-5xl normal-case mb-10">
+    Queridos Familiares y Amigos,
+  </h2>
+  <p class="max-w-2xl mx-auto">
+    Estamos encantados de invitaros a celebrar el comienzo de nuestro para
+    siempre. Vuestro amor y vuestro apoyo significan mucho para nosotros y
+    estamos deseando compartir este día tan especial con vosotros.
+  </p>
+  <div
+    class="inline-block rotate-2 border-[12px] border-white bg-[#f5eee4] my-24"
+  >
+    <Image
+      src={myImage}
+      alt="Boda de María y Sergio"
+      class="block w-full h-auto"
+      width="350"
+      height="500"
+    />
+  </div>
+  <h2 class="font-gambarino text-5xl normal-case mb-10">05/09/2025</h2>
+  <p class="max-w-2xl">
+    El encuentro tendrá lugar a las 5 pm <br /> en la iglesia de Santa María la Antigua
+    <br />
+    <a>(c/ Reina Victoria 10, Madrid)</a>
+  </p>
+</div>

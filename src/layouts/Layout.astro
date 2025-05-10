@@ -1,17 +1,50 @@
 ---
-import '@/styles/global.css';
+import "@/styles/global.css";
+import "@fontsource-variable/inter";
+import Header from "@/components/ui/Header.astro";
+const { class: className } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="h-full w-full">
+  <head>
+    <!-- HTML Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>María & Sergio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Página oficial de la boda de María y Sergio"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mariaysergio.com/" />
+    <meta property="og:title" content="María y Sergio" />
+    <meta
+      property="og:description"
+      content="Página oficial de la boda de María y Sergio"
+    />
+    <meta property="og:image" content="" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="María y Sergio" />
+    <meta
+      name="twitter:description"
+      content="Página oficial de la boda de María y Sergio"
+    />
+  </head>
+
+  <body
+    class="bg-secondary text-primary mx-auto w-full uppercase text-base font-medium"
+  >
+    <Header />
+
+    <main class={`text-center ${className}`}>
+      <slot />
+    </main>
+  </body>
 </html>

@@ -1,0 +1,29 @@
+---
+const schedule = [
+  {
+    time: "5:00 PM",
+    description: "Comienza la boda",
+  },
+  {
+    time: "6:00 PM",
+    description: "Comienza la boda",
+  },
+  {
+    time: "7:00 PM",
+    description: "Comienza la boda",
+  },
+];
+---
+
+<div class="pt-24 px-5">
+  <h2 class="font-gambarino text-5xl normal-case mb-10">El Horario</h2>
+
+  {
+    schedule.map(({ time, description }) => (
+      <div class="mb-10">
+        <h3 class=" font-gambarino text-3xl mb-1">{time}</h3>
+        <p>{description}</p>
+      </div>
+    ))
+  }
+</div>

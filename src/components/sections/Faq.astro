@@ -1,0 +1,38 @@
+---
+import Accordion from "@/components/ui/Accordion.astro";
+import { Image } from "astro:assets";
+import myImage from "#/images/mock-image.jpg";
+
+const questions = [
+  {
+    title: "Información 1",
+    description: "Esto es la información 1",
+  },
+  {
+    title: "Información 2",
+    description: "Esto es la información 2",
+  },
+  {
+    title: "Información 3",
+    description: "Esto es la información 3",
+  },
+];
+---
+
+<div class="py-24 px-5">
+  <h2 class="font-gambarino text-5xl normal-case mb-14">
+    Posibles Preguntas y Respuestas
+  </h2>
+
+  {
+    questions.map((question, index) => (
+      <Accordion
+        title={question.title}
+        description={question.description}
+        index={index}
+      />
+    ))
+  }
+</div>
+
+<Image src={myImage} alt="Boda de María y Sergio" />
