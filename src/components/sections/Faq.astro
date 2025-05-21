@@ -1,38 +1,54 @@
 ---
 import Accordion from "@/components/ui/Accordion.astro";
 import { Image } from "astro:assets";
-import myImage from "#/images/mock-image.jpg";
+import myImage from "#/images/cierre.webp";
 
 const questions = [
   {
-    title: "Información 1",
-    description: "Esto es la información 1",
+    title: "¿Dónde puedo aparcar?",
+    description: `
+      <p class="mb-4">
+        Os indicaremos las mejores opciones para aparcar cercanas a la iglesia. No es una zona fácil, así que os recomendamos ir con tiempo.
+      </p>
+      <p class="mb-4">
+        Habrá una zona habilitada para los que necesiten bajarse del coche en la puerta de la iglesia.
+      </p>
+      <p>
+        En la finca hay <strong>parking libre y gratuito</strong> para todos.
+      </p>
+    `,
   },
   {
-    title: "Información 2",
-    description: "Esto es la información 2",
-  },
-  {
-    title: "Información 3",
-    description: "Esto es la información 3",
+    title: "¿Cuál es el código de vestimenta?",
+    description: `
+      <p>
+        Ninguno, solo necesitamos que estés con nosotros celebrando, siempre y cuando no lleves un <strong>vestido largo blanco</strong>.
+      </p>
+    `,
   },
 ];
 ---
 
-<div class="py-24 px-5">
-  <h2 class="font-gambarino text-5xl normal-case mb-14">
-    Posibles Preguntas y Respuestas
-  </h2>
+<h2 class="font-gambarino text-5xl normal-case mb-14">
+  Posibles Preguntas y Respuestas
+</h2>
 
-  {
-    questions.map((question, index) => (
-      <Accordion
-        title={question.title}
-        description={question.description}
-        index={index}
-      />
-    ))
-  }
+{
+  questions.map((question, index) => (
+    <Accordion
+      title={question.title}
+      description={question.description}
+      index={index}
+    />
+  ))
+}
+
+<div
+  class="inline-block rotate-2 border-[12px] border-white bg-[#f5eee4] my-24"
+>
+  <Image
+    src={myImage}
+    alt="Boda de María y Sergio"
+    class="block w-72 md:w-96 h-auto"
+  />
 </div>
-
-<Image src={myImage} alt="Boda de María y Sergio" />

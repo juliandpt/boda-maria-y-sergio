@@ -3,16 +3,12 @@ import NavbarElement from "./NavbarElement.astro";
 
 const navbarElements = [
   {
-    href: "history",
-    text: "nuestra historia",
-  },
-  {
     href: "schedule",
-    text: "horario",
+    text: "el gran día",
   },
   {
-    href: "presents",
-    text: "regalos",
+    href: "present",
+    text: "regalo",
   },
   {
     href: "faq",
@@ -22,7 +18,7 @@ const navbarElements = [
 ---
 
 <header
-  class="fixed top-0 z-20 w-full flex items-center justify-between p-5 text-[14px] bg-secondary"
+  class="fixed top-0 z-20 left-1/2 -translate-x-1/2 flex items-center justify-between p-5 text-[14px] bg-secondary w-full max-w-screen-2xl"
 >
   <div class="flex-1 flex justify-start">
     <a href="/" class="font-gambarino text-xl">M+S</a>
@@ -37,7 +33,7 @@ const navbarElements = [
   </nav>
 
   <div class="flex-1 flex justify-end">
-    <a href="/#confirmation" class="relative group">
+    <a href="/#confirmation" class="relative group uppercase">
       confirma tu asistencia
       <span
         class="absolute left-0 bottom-0 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"

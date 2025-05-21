@@ -1,0 +1,46 @@
+---
+import CheckIcon from "@/components/ui/icons/CheckIcon.astro";
+import Phone from "@/components/ui/Phone.astro";
+
+const phones = [
+  {
+    phoneNumber: "695 62 05 78",
+    description: "María",
+  },
+  {
+    phoneNumber: "610 46 98 75",
+    description: "Sergio",
+  },
+];
+---
+
+<h2 class="font-gambarino text-5xl normal-case mb-10">Regalo</h2>
+<p>Nuestros mayor regalo es disfrutar de este día con todo vosotros</p>
+<p>
+  Pero si quieres ayudarnos en nuestra etapa, podéis hacerlo en la siguiente
+  cuenta:
+</p>
+<button
+  class="relative font-gambarino text-2xl my-16 cursor-pointer transition-opacity text-center"
+  onclick="copyToClipboard()"
+>
+  <span
+    id="iban-text"
+    class="font-gambarino text-2xl md:text-3xl transition-all opacity-100 duration-300"
+  >
+    ES21 2100 3189 4813 0020 4392
+  </span>
+  <CheckIcon
+    id="check-icon"
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300"
+  />
+</button>
+
+<p class="mb-5">Si tienes cualquier duda, puedes llamarnos</p>
+<div class="flex items-center gap-5 md:gap-10">
+  {
+    phones.map(({ phoneNumber, description }) => (
+      <Phone phoneNumber={phoneNumber} description={description} />
+    ))
+  }
+</div>

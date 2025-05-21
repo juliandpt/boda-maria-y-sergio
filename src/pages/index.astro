@@ -2,24 +2,24 @@
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/ui/Section.astro";
 import Landing from "@/components/sections/Landing.astro";
-import History from "@/components/sections/History.astro";
 import Schedule from "@/components/sections/Schedule.astro";
 import Confirmation from "@/components/sections/Confirmation.astro";
+import Present from "@/components/sections/Present.astro";
 import Faq from "@/components/sections/Faq.astro";
 ---
 
 <Layout>
-  <Section id="landing">
+  <Section id="landing" class="relative md:px-0">
     <Landing />
-  </Section>
-  <Section id="history" class="bg-primary text-secondary">
-    <History />
-  </Section>
-  <Section id="schedule">
-    <Schedule />
   </Section>
   <Section id="confirmation" class="bg-primary text-secondary">
     <Confirmation />
+  </Section>
+  <Section id="schedule" class="relative">
+    <Schedule />
+  </Section>
+  <Section id="present" class="bg-primary text-secondary">
+    <Present />
   </Section>
   <Section id="faq">
     <Faq />

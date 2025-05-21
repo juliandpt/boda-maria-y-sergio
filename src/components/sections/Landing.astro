@@ -1,50 +1,50 @@
 ---
 import ImagesRotaion from "@/components/ui/ImagesRotation.astro";
-import { Image } from "astro:assets";
-import myImage from "#/images/mock-image.jpg";
+import Countdown from "@/components/ui/Countdown.astro";
 ---
 
-<div class="pt-24 pb-10 px-5">
-  <p>La boda de</p>
-  <h1 class="font-gambarino normal-case text-[13vw] xl:text-[11vw] mb-14">
-    María & Sergio
-  </h1>
-  <p class="text-xl">5 de septiembre de 2025</p>
-  <a
-    href="https://maps.app.goo.gl/kD1AAbxCrvmczwyX9"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    iglesia Santa María la Antigua, Madrid
-  </a>
-</div>
+<p class="uppercase text-2xl">¡nos casamos!</p>
+<h1 class="font-gambarino text-[13vw] xl:text-[11vw] my-10 md:my-0">
+  María & Sergio
+</h1>
+<p class="text-2xl mb-5">5 septiembre 2025</p>
+<p class="text-sm italic">Ceremonia:</p>
+<a
+  href="https://maps.app.goo.gl/kD1AAbxCrvmczwyX9"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="mb-5"
+>
+  Santa María la Antigua - Vicálvaro, Madrid
+</a>
+<p class="text-sm italic">Celebración:</p>
+<a
+  href="https://maps.app.goo.gl/gWKyKcXJcuqq9htu7"
+  target="_blank"
+  rel="noopener noreferrer"
+  class=""
+>
+  Jardines del Negralejo - Rivas Vaciamadrid
+</a>
 
-<ImagesRotaion />
+<ImagesRotaion class="my-24 z-10" />
 
-<div class="py-24 px-5">
-  <h2 class="font-gambarino text-5xl normal-case mb-10">
-    Queridos Familiares y Amigos,
-  </h2>
-  <p class="max-w-2xl mx-auto">
-    Estamos encantados de invitaros a celebrar el comienzo de nuestro para
-    siempre. Vuestro amor y vuestro apoyo significan mucho para nosotros y
-    estamos deseando compartir este día tan especial con vosotros.
-  </p>
-  <div
-    class="inline-block rotate-2 border-[12px] border-white bg-[#f5eee4] my-24"
-  >
-    <Image
-      src={myImage}
-      alt="Boda de María y Sergio"
-      class="block w-full h-auto"
-      width="350"
-      height="500"
-    />
-  </div>
-  <h2 class="font-gambarino text-5xl normal-case mb-10">05/09/2025</h2>
-  <p class="max-w-2xl">
-    El encuentro tendrá lugar a las 5 pm <br /> en la iglesia de Santa María la Antigua
-    <br />
-    <a>(c/ Reina Victoria 10, Madrid)</a>
-  </p>
-</div>
+<h2 class="font-gambarino text-5xl normal-case mb-10">
+  ¡Estamos deseando celebrar con vosotros!
+</h2>
+<p class="max-w-2xl mx-auto mb-2.5">
+  Parecía que nunca iba a llegar, pero por fin está aquí, nuestra boda.
+</p>
+<p class="max-w-2xl mx-auto mb-2.5">
+  Para nosotros es muy especial poder juntar a toda nuestra familia y amigos y
+  disfrutar juntos.
+</p>
+<p class="max-w-2xl mx-auto mb-2.5">
+  Estamos preparando todo para que sea un día para no olvidar, en el que
+  celebrarnos a nosotros, nuestra historia y sobretodo la gran suerte que
+  tenemos de estar rodeados de tanta gente a la que queremos y nos quiere.
+</p>
+
+<h3 class="font-gambarino text-3xl normal-case my-10">¡Ya no queda nada!</h3>
+
+<Countdown />

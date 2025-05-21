@@ -1,29 +1,54 @@
 ---
+import Image from "astro/components/Image.astro";
+import LocationArrowIcon from "../ui/icons/LocationArrowIcon.astro";
+
 const schedule = [
   {
-    time: "5:00 PM",
-    description: "Comienza la boda",
+    image: "/images/hands.webp",
+    title: "Comienza la boda",
+    time: "17:30",
+    location: "Iglesia Santa María la Antigua",
+    locationLink: "https://maps.app.goo.gl/kD1AAbxCrvmczwyX9",
   },
   {
-    time: "6:00 PM",
-    description: "Comienza la boda",
+    image: "/images/table.webp",
+    title: "Celebración",
+    time: "19:30",
+    location: "Jardines del Negralejo",
+    locationLink: "https://maps.app.goo.gl/gWKyKcXJcuqq9htu7",
   },
   {
-    time: "7:00 PM",
-    description: "Comienza la boda",
+    image: "/images/cocktails.webp",
+    title: "Comienza la fiesta",
+    time: "23:00",
+    location: "Jardines del Negralejo",
+    locationLink: "https://maps.app.goo.gl/gWKyKcXJcuqq9htu7",
   },
 ];
 ---
 
-<div class="pt-24 px-5">
-  <h2 class="font-gambarino text-5xl normal-case mb-10">El Horario</h2>
+<h2 class="font-gambarino text-5xl mb-14">EL GRAN DÍA</h2>
 
-  {
-    schedule.map(({ time, description }) => (
-      <div class="mb-10">
-        <h3 class=" font-gambarino text-3xl mb-1">{time}</h3>
-        <p>{description}</p>
-      </div>
-    ))
-  }
-</div>
+{
+  schedule.map(({ image, title, time, location, locationLink }) => (
+    <div class="flex flex-col relative mb-20 last:mb-0 items-center">
+      <Image
+        src={image}
+        alt="Boda de María y Sergio"
+        width={125}
+        height={125}
+      />
+      <h3 class=" font-gambarino text-3xl mb-1">{time}</h3>
+      <h4 class=" font-gambarino text-xl mb-4">{title}</h4>
+      <a
+        href={locationLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group flex gap-2 justify-center items-center"
+      >
+        <LocationArrowIcon class="group-hover:animate-[sway-animation_0.2s_ease-in-out_5] transition-transform" />
+        {location}
+      </a>
+    </div>
+  ))
+}

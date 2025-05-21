@@ -2,6 +2,7 @@
 import "@/styles/global.css";
 import "@fontsource-variable/inter";
 import Header from "@/components/ui/Header.astro";
+import Footer from "@/components/ui/Footer.astro";
 const { class: className } = Astro.props;
 ---
 
@@ -12,7 +13,7 @@ const { class: className } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>María & Sergio</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.webp" />
     <meta
       name="description"
       content="Página oficial de la boda de María y Sergio"
@@ -20,7 +21,7 @@ const { class: className } = Astro.props;
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.mariaysergio.com/" />
+    <meta property="og:url" content="https://www.bodonmaldochon.es/" />
     <meta property="og:title" content="María y Sergio" />
     <meta
       property="og:description"
@@ -38,13 +39,87 @@ const { class: className } = Astro.props;
     />
   </head>
 
-  <body
-    class="bg-secondary text-primary mx-auto w-full uppercase text-base font-medium"
-  >
+  <body class="bg-secondary text-primary mx-auto w-full text-base font-medium">
     <Header />
 
     <main class={`text-center ${className}`}>
       <slot />
     </main>
+
+    <Footer />
   </body>
 </html>
+
+<script is:inline>
+  const targetDate = new Date("2025-09-05T00:00:00");
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      document.getElementById("months").textContent = "00";
+      document.getElementById("days").textContent = "00";
+      document.getElementById("hours").textContent = "00";
+      return;
+    }
+
+    const totalHours = Math.floor(diff / (60 * 60 * 1000));
+    const totalDays = Math.floor(totalHours / 24);
+
+    const months = Math.floor(totalDays / 30.44);
+    const days = totalDays % Math.floor(30.44);
+    const hours = totalHours % 24;
+
+    document.getElementById("months").textContent = String(months).padStart(
+      2,
+      "0",
+    );
+    document.getElementById("days").textContent = String(days).padStart(2, "0");
+    document.getElementById("hours").textContent = String(hours).padStart(
+      2,
+      "0",
+    );
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  function toggleAccordion(index) {
+    const content = document.getElementById(`content-${index}`);
+    const chevronIcon = document.getElementById(`chevron-icon-${index}`);
+
+    if (!content || !chevronIcon) return;
+
+    const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
+    if (isOpen) {
+      content.style.maxHeight = "0";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+
+    chevronIcon.classList.toggle("rotate-0");
+    chevronIcon.classList.toggle("-rotate-180");
+  }
+
+  function copyToClipboard() {
+    const textEl = document.getElementById("iban-text");
+    const iban = textEl.textContent;
+    const iconEl = document.getElementById("check-icon");
+
+    navigator.clipboard.writeText(iban).then(() => {
+      textEl.classList.remove("opacity-100");
+      textEl.classList.add("opacity-10");
+      iconEl.classList.remove("opacity-0");
+      iconEl.classList.add("opacity-100");
+
+      setTimeout(() => {
+        textEl.classList.remove("opacity-10");
+        textEl.classList.add("opacity-100");
+        iconEl.classList.remove("opacity-100");
+        iconEl.classList.add("opacity-0");
+      }, 2000);
+    });
+  }
+</script>

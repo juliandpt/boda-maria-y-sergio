@@ -22,7 +22,7 @@
   background-image: url("images//bg-landing.webp");
   background-size: auto 100%;
   background-repeat: repeat-x;
-  animation: moveBackground 15s linear infinite;
+  animation: moveBackground 25s linear infinite;
 }
 
 @keyframes moveBackground {
@@ -31,5 +31,23 @@
   }
   100% {
     background-position: -1440px 0;
+  }
+}
+
+@keyframes sway-animation {
+  0% {
+    transform: rotate(-3deg);
+  }
+  25% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-3deg);
   }
 }
