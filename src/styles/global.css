@@ -19,7 +19,7 @@
 }
 
 .bg-rotation-images {
-  background-image: url("images//bg-landing.webp");
+  background-image: url("/images/bg-landing.webp");
   background-size: auto 100%;
   background-repeat: repeat-x;
   animation: moveBackground 25s linear infinite;
