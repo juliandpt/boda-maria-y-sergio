@@ -1,7 +1,5 @@
 ---
 import Accordion from "@/components/ui/Accordion.astro";
-import { Image } from "astro:assets";
-import myImage from "#/images/cierre.webp";
 
 const questions = [
   {
@@ -46,9 +44,5 @@ const questions = [
 <div
   class="inline-block rotate-2 border-[12px] border-white bg-[#f5eee4] my-24"
 >
-  <Image
-    src={myImage}
-    alt="Boda de María y Sergio"
-    class="block w-72 md:w-96 h-auto"
-  />
+  <img src="/images/cierre.webp" alt="Boda de María y Sergio" class="block w-72 md:w-96 h-auto" />
 </div>

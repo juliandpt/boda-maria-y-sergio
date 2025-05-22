@@ -1,5 +1,4 @@
 ---
-import Image from "astro/components/Image.astro";
 import LocationArrowIcon from "../ui/icons/LocationArrowIcon.astro";
 
 const schedule = [
@@ -32,12 +31,7 @@ const schedule = [
 {
   schedule.map(({ image, title, time, location, locationLink }) => (
     <div class="flex flex-col relative mb-20 last:mb-0 items-center">
-      <Image
-        src={image}
-        alt="Boda de María y Sergio"
-        width={125}
-        height={125}
-      />
+      <img src={image} alt="Boda de María y Sergio" class="w-[125px] h-[125px]" />
       <h3 class=" font-gambarino text-3xl mb-1">{time}</h3>
       <h4 class=" font-gambarino text-xl mb-4">{title}</h4>
       <a
