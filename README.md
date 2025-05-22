@@ -1,48 +1,86 @@
-# Astro Starter Kit: Basics
+# Boda de María y Sergio
 
-```sh
-pnpm create astro@latest -- --template basics
+> ¡Bienvenido al sitio web oficial de la boda de María y Sergio!  
+Este es un espacio dedicado a compartir los detalles importantes del gran día de María y Sergio.
+
+---
+
+## Descripción del Proyecto
+
+Este sitio web está diseñado como una página informativa para la celebración de la boda entre María y Sergio. Incluye:
+
+- Información de la ceremonia y recepción
+- Detalles de agenda
+- Galería de fotos (próximamente)
+- Formulario de confirmación de asistencia (opcional)
+- Mapa e información de transporte
+- Sección de preguntas frecuentes
+
+---
+
+## Tecnologías Usadas
+
+- [Astro](https://astro.build/ ) — Framework para construir sitios web rápidos y estáticos
+- [Tailwind CSS](https://tailwindcss.com/ ) — Estilos modernos y personalizados
+- HTML & JavaScript Vanilla — Para estructura y funcionalidad básica
+- [PNPM](https://pnpm.io/ ) — Manejador de paquetes rápido y eficiente
+
+---
+
+## Cómo Ejecutar el Proyecto Localmente
+
+1. **Clona este repositorio:**
+
+```bash
+git clone https://github.com/juliandpt/boda-maria-y-sergio.git 
+cd boda-maria-y-sergio
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. **Instala las dependencias:**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+pnpm install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+3. **Inicia el servidor de desarrollo:**
 
-## 🧞 Commands
+```bash
+pnpm dev
+```
 
-All commands are run from the root of the project, from a terminal:
+4. **Abre el navegador y ve a `http://localhost:3000/`**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## Como generar build del sitio web
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Para generar un build del sitio web, ejecuta el siguiente comando:
+
+```bash
+pnpm build
+```
+
+El sitio web se generará en la carpeta `dist/`.
+
+---
+
+## Despliegue
+
+Este proyecto se ha implementado en [Cloudflare Pages](https://pages.cloudflare.com/).
+
+---
+
+## Recursos adicionales
+
+- [Astro](https://astro.build/themes/docs/intro/)
+- [Tailwind CSS](https://tailwindcss.com/docs/guides/astro)
+
+---
+
+## Contacto
+
+Si tienes alguna pregunta o comentario, no dudes en contactarme a través de [Twitter](https://twitter.com/depabloj) o [GitHub](https://github.com/juliandpt).
+
+
+
+
