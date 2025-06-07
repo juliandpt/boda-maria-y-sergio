@@ -8,7 +8,7 @@ const { title, description, index } = Astro.props;
     onclick={`toggleAccordion(${index})`}
     class="w-full flex justify-between items-center cursor-pointer"
   >
-    <span class="uppercase">{title}</span>
+    <span class="uppercase text-sm sm:text-base truncate">{title}</span>
     <ChevronIcon
       id={`chevron-icon-${index}`}
       class="transition-transform duration-300 transform rotate-0"
