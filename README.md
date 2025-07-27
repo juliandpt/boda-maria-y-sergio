@@ -1,6 +1,6 @@
 <div align="center">
-<a href="https://juliandepablo.com" target="_blank">
-<img src="public/images/landing-mockup.webp" alt="Julian de Pablo's Portfolio">
+<a href="https://bodonmaldochon.es" target="_blank">
+<img src="public/images/landing-mockup.webp" alt="Maria & Sergio's landing mockup">
 </a>
 <p></p>
 </div>
