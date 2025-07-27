@@ -1,86 +1,63 @@
-# Boda de María y Sergio
+<div align="center">
+<a href="https://juliandepablo.com" target="_blank">
+<img src="public/images/landing-mockup.webp" alt="Julian de Pablo's Portfolio">
+</a>
+<p></p>
+</div>
 
-> ¡Bienvenido al sitio web oficial de la boda de María y Sergio!  
-Este es un espacio dedicado a compartir los detalles importantes del gran día de María y Sergio.
+<div align="center">
+    <a href="https://bodonmaldochon.es" target="_blank">
+        Website
+    </a>
+    <span>&nbsp;❖&nbsp;</span>
+    <a href="https://github.com/juliandpt/boda-maria-y-sergio?tab=readme-ov-file#-about">
+        About
+    </a>
+    <span>&nbsp;❖&nbsp;</span>
+    <a href="https://github.com/juliandpt/boda-maria-y-sergio?tab=readme-ov-file#-stack">
+        Stack
+    </a>
+    <span>&nbsp;❖&nbsp;</span>
+    <a href="https://github.com/juliandpt/boda-maria-y-sergio?tab=readme-ov-file#-contact">
+        Contact
+    </a>
+</div>
 
----
+</p>
 
-## Descripción del Proyecto
+<div align="center">
 
-Este sitio web está diseñado como una página informativa para la celebración de la boda entre María y Sergio. Incluye:
+![Astro Badge](https://img.shields.io/badge/Astro-000?logo=astro&logoColor=fff&style=flat)
+![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
+![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat)
+![Vite Badge](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=flat)
 
-- Información de la ceremonia y recepción
-- Detalles de agenda
-- Galería de fotos (próximamente)
-- Formulario de confirmación de asistencia (opcional)
-- Mapa e información de transporte
-- Sección de preguntas frecuentes
+</div>
 
----
+> [!WARNING]
+> This page is a work in progress.
+> Needs to be updated with the latest information regarding the wedding celebration.
 
-## Tecnologías Usadas
+## ℹ️ About
 
-- [Astro](https://astro.build/ ) — Framework para construir sitios web rápidos y estáticos
-- [Tailwind CSS](https://tailwindcss.com/ ) — Estilos modernos y personalizados
-- HTML & JavaScript Vanilla — Para estructura y funcionalidad básica
-- [PNPM](https://pnpm.io/ ) — Manejador de paquetes rápido y eficiente
+This website is designed as an informational page for the wedding celebration between María and Sergio. It includes:
 
----
+- Information about the ceremony and reception
+- Schedule details
+- Reservation link for guests
+- transportation information
+- Frequently asked questions section
 
-## Cómo Ejecutar el Proyecto Localmente
+## 📦 Stack
 
-1. **Clona este repositorio:**
+- [**Astro**](https://astro.build/) - Web development for the rest of us.
+- [**Typescript**](https://www.typescriptlang.org/) - JavaScript with syntax for types.
+- [**Tailwindcss**](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
+- [**Prettier**](https://prettier.io/) - An opinionated code formatter.
 
-```bash
-git clone https://github.com/juliandpt/boda-maria-y-sergio.git 
-cd boda-maria-y-sergio
-```
+## ✉️ Contact
 
-2. **Instala las dependencias:**
-
-```bash
-pnpm install
-```
-
-3. **Inicia el servidor de desarrollo:**
-
-```bash
-pnpm dev
-```
-
-4. **Abre el navegador y ve a `http://localhost:3000/`**
-
----
-
-## Como generar build del sitio web
-
-Para generar un build del sitio web, ejecuta el siguiente comando:
-
-```bash
-pnpm build
-```
-
-El sitio web se generará en la carpeta `dist/`.
-
----
-
-## Despliegue
-
-Este proyecto se ha implementado en [Cloudflare Pages](https://pages.cloudflare.com/).
-
----
-
-## Recursos adicionales
-
-- [Astro](https://astro.build/themes/docs/intro/)
-- [Tailwind CSS](https://tailwindcss.com/docs/guides/astro)
-
----
-
-## Contacto
-
-Si tienes alguna pregunta o comentario, no dudes en contactarme a través de [Twitter](https://twitter.com/depabloj) o [GitHub](https://github.com/juliandpt).
-
+If you have any questions or comments, please feel free to contact me via [Twitter](https://twitter.com/depabloj) or [GitHub](https://github.com/juliandpt).
 
 
 
