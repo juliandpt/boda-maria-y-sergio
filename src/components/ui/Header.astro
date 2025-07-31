@@ -1,42 +1,38 @@
 ---
-import NavbarElement from "./NavbarElement.astro";
+import NavbarElement from './NavbarElement.astro'
 
 const navbarElements = [
   {
-    href: "schedule",
-    text: "el gran día",
+    href: 'schedule',
+    text: 'el gran día',
   },
   {
-    href: "present",
-    text: "regalo",
+    href: 'present',
+    text: 'regalo',
   },
   {
-    href: "faq",
-    text: "faq",
+    href: 'faq',
+    text: 'faq',
   },
-];
+]
 ---
 
 <header
-  class="fixed top-0 z-20 left-1/2 -translate-x-1/2 flex items-center justify-between p-5 text-xs sm:text-[14px] bg-secondary w-full max-w-screen-2xl"
+  class="bg-secondary fixed left-1/2 top-0 z-20 flex w-full max-w-screen-2xl -translate-x-1/2 items-center justify-between p-5 text-xs sm:text-[14px]"
 >
-  <div class="flex-1 flex justify-start">
+  <div class="flex flex-1 justify-start">
     <a href="/" class="font-gambarino text-xl">M+S</a>
   </div>
 
-  <nav class="hidden lg:flex flex-none space-x-8 justify-center">
-    {
-      navbarElements.map(({ href, text }) => (
-        <NavbarElement href={href} text={text} />
-      ))
-    }
+  <nav class="hidden flex-none justify-center space-x-8 lg:flex">
+    {navbarElements.map(({ href, text }) => <NavbarElement href={href} text={text} />)}
   </nav>
 
-  <div class="flex-1 flex justify-end">
-    <a href="/#confirmation" class="relative group uppercase">
+  <div class="flex flex-1 justify-end">
+    <a href="/#confirmation" class="group relative uppercase">
       confirma tu asistencia
       <span
-        class="absolute left-0 bottom-0 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"
+        class="absolute bottom-0 left-0 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"
       >
       </span>
     </a>

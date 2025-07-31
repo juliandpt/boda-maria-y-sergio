@@ -1,25 +1,25 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-gambarino: "Gambarino";
+  --font-gambarino: 'Gambarino';
   --color-primary: #850d23;
   --color-secondary: #f5eee4;
 }
 
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
-  font-family: "Gambarino";
+  font-family: 'Gambarino';
   src:
-    url("/fonts/Gambarino-Regular.woff2") format("woff2"),
-    url("/fonts/Gambarino-Regular.woff") format("woff"),
-    url("/fonts/Gambarino-Regular.ttf") format("truetype");
+    url('/fonts/Gambarino-Regular.woff2') format('woff2'),
+    url('/fonts/Gambarino-Regular.woff') format('woff'),
+    url('/fonts/Gambarino-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 .bg-rotation-images {
-  background-image: url("/images/bg-landing.webp");
+  background-image: url('/images/bg-landing.webp');
   background-size: auto 100%;
   background-repeat: repeat-x;
   animation: moveBackground 25s linear infinite;

@@ -1,16 +1,16 @@
 ---
-const { href, text } = Astro.props;
+const { href, text } = Astro.props
 ---
 
 <a
   href={`/#${href}`}
-  class="block transition duration-400 group relative overflow-hidden uppercase"
+  class="duration-400 group relative block overflow-hidden uppercase transition"
 >
-  <span class="block group-hover:-translate-y-full transition-transform">
+  <span class="block transition-transform group-hover:-translate-y-full">
     {text}
   </span>
   <span
-    class="absolute left-0 top-0 block translate-y-full group-hover:translate-y-0 transition-transform"
+    class="absolute left-0 top-0 block translate-y-full transition-transform group-hover:translate-y-0"
   >
     {text}
   </span>

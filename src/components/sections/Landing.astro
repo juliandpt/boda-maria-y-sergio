@@ -1,50 +1,42 @@
 ---
-import ImagesRotaion from "@/components/ui/ImagesRotation.astro";
-import Countdown from "@/components/ui/Countdown.astro";
+import Countdown from '@/components/ui/Countdown.astro'
+import ImagesRotaion from '@/components/ui/ImagesRotation.astro'
+import LandingLink from '@/components/ui/LandingLink.astro'
 ---
 
-<p class="uppercase text-2xl">¡nos casamos!</p>
-<h1 class="font-gambarino text-[13vw] xl:text-[11vw] my-10 md:my-0">
-  María & Sergio
-</h1>
-<p class="text-2xl mb-5">5 septiembre 2025</p>
-<p class="text-sm italic">Ceremonia:</p>
-<a
-  href="https://maps.app.goo.gl/kD1AAbxCrvmczwyX9"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="mb-5"
->
-  Santa María la Antigua - Vicálvaro, Madrid
-</a>
-<p class="text-sm italic">Celebración:</p>
-<a
-  href="https://maps.app.goo.gl/gWKyKcXJcuqq9htu7"
-  target="_blank"
-  rel="noopener noreferrer"
-  class=""
->
-  Jardines del Negralejo - Rivas Vaciamadrid
-</a>
+<p class="text-2xl uppercase">¡nos casamos!</p>
+<h1 class="font-gambarino my-10 text-[13vw] md:my-0 xl:text-[11vw]">María & Sergio</h1>
+<p class="mb-10 text-2xl">5 septiembre 2025</p>
+<div class="flex w-full flex-col items-center gap-5 md:w-auto md:flex-row md:gap-10">
+  <LandingLink
+    title="Ceremonia"
+    primaryLocation="Parroquia Santa María la Antigua"
+    secondaryLocation="Vicálvaro, Madrid"
+    url="https://maps.app.goo.gl/JfhX4HeaR1JBHuWS8"
+  />
+  <LandingLink
+    title="Celebración"
+    primaryLocation="Jardines del Negralejo"
+    secondaryLocation="Rivas Vaciamadrid"
+    url="https://maps.app.goo.gl/gWKyKcXJcuqq9htu7"
+  />
+</div>
 
-<ImagesRotaion class="my-24 z-10" />
+<ImagesRotaion class="z-10 my-24" />
 
-<h2 class="font-gambarino text-5xl normal-case mb-10">
-  ¡Estamos deseando celebrar con vosotros!
-</h2>
-<p class="max-w-2xl mx-auto mb-2.5">
+<h2 class="font-gambarino mb-10 text-5xl normal-case">¡Estamos deseando celebrar con vosotros!</h2>
+<p class="mx-auto mb-2.5 max-w-2xl">
   Parecía que nunca iba a llegar, pero por fin está aquí, nuestra boda.
 </p>
-<p class="max-w-2xl mx-auto mb-2.5">
-  Para nosotros es muy especial poder juntar a toda nuestra familia y amigos y
-  disfrutar juntos.
+<p class="mx-auto mb-2.5 max-w-2xl">
+  Para nosotros es muy especial poder juntar a toda nuestra familia y amigos y disfrutar juntos.
 </p>
-<p class="max-w-2xl mx-auto mb-2.5">
-  Estamos preparando todo para que sea un día para no olvidar, en el que
-  celebrarnos a nosotros, nuestra historia y sobretodo la gran suerte que
-  tenemos de estar rodeados de tanta gente a la que queremos y nos quiere.
+<p class="mx-auto mb-2.5 max-w-2xl">
+  Estamos preparando todo para que sea un día para no olvidar, en el que celebrarnos a nosotros,
+  nuestra historia y sobretodo la gran suerte que tenemos de estar rodeados de tanta gente a la que
+  queremos y nos quiere.
 </p>
 
-<h3 class="font-gambarino text-3xl normal-case my-10">¡Ya no queda nada!</h3>
+<h3 class="font-gambarino my-10 text-3xl normal-case">¡Ya no queda nada!</h3>
 
 <Countdown />

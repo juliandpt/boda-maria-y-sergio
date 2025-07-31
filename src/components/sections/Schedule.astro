@@ -1,46 +1,46 @@
 ---
-import LocationArrowIcon from "../ui/icons/LocationArrowIcon.astro";
+import LocationArrowIcon from '../ui/icons/LocationArrowIcon.astro'
 
 const schedule = [
   {
-    image: "/images/hands.webp",
-    title: "Comienza la boda",
-    time: "17:30",
-    location: "Iglesia Santa María la Antigua",
-    locationLink: "https://maps.app.goo.gl/kD1AAbxCrvmczwyX9",
+    image: '/images/hands.webp',
+    title: 'Comienza la boda',
+    time: '17:30',
+    location: 'Iglesia Santa María la Antigua',
+    locationLink: 'https://maps.app.goo.gl/kD1AAbxCrvmczwyX9',
   },
   {
-    image: "/images/table.webp",
-    title: "Celebración",
-    time: "19:30",
-    location: "Jardines del Negralejo",
-    locationLink: "https://maps.app.goo.gl/gWKyKcXJcuqq9htu7",
+    image: '/images/table.webp',
+    title: 'Celebración',
+    time: '19:30',
+    location: 'Jardines del Negralejo',
+    locationLink: 'https://maps.app.goo.gl/gWKyKcXJcuqq9htu7',
   },
   {
-    image: "/images/cocktails.webp",
-    title: "Comienza la fiesta",
-    time: "23:00",
-    location: "Jardines del Negralejo",
-    locationLink: "https://maps.app.goo.gl/gWKyKcXJcuqq9htu7",
+    image: '/images/cocktails.webp',
+    title: 'Comienza la fiesta',
+    time: '23:00',
+    location: 'Jardines del Negralejo',
+    locationLink: 'https://maps.app.goo.gl/gWKyKcXJcuqq9htu7',
   },
-];
+]
 ---
 
-<h2 class="font-gambarino text-5xl mb-14">EL GRAN DÍA</h2>
+<h2 class="font-gambarino mb-14 text-5xl">EL GRAN DÍA</h2>
 
 {
   schedule.map(({ image, title, time, location, locationLink }) => (
-    <div class="flex flex-col relative mb-20 last:mb-0 items-center">
-      <img src={image} alt="Boda de María y Sergio" class="w-[125px] h-[125px]" />
-      <h3 class=" font-gambarino text-3xl mb-1">{time}</h3>
-      <h4 class=" font-gambarino text-xl mb-4">{title}</h4>
+    <div class="relative mb-20 flex flex-col items-center last:mb-0">
+      <img src={image} alt="Boda de María y Sergio" class="h-[125px] w-[125px]" />
+      <h3 class="font-gambarino mb-1 text-3xl">{time}</h3>
+      <h4 class="font-gambarino mb-4 text-xl">{title}</h4>
       <a
         href={locationLink}
         target="_blank"
         rel="noopener noreferrer"
-        class="group flex gap-2 justify-center items-center"
+        class="group flex items-center justify-center gap-2"
       >
-        <LocationArrowIcon class="group-hover:animate-[sway-animation_0.2s_ease-in-out_5] transition-transform" />
+        <LocationArrowIcon class="transition-transform group-hover:animate-[sway-animation_0.2s_ease-in-out_5]" />
         {location}
       </a>
     </div>

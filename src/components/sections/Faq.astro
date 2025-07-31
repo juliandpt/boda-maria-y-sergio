@@ -1,9 +1,9 @@
 ---
-import Accordion from "@/components/ui/Accordion.astro";
+import Accordion from '@/components/ui/Accordion.astro'
 
 const questions = [
   {
-    title: "¿Dónde puedo aparcar?",
+    title: '¿Dónde puedo aparcar?',
     description: `
       <p class="mb-4">
         Os indicaremos las mejores opciones para aparcar cercanas a la iglesia. No es una zona fácil, así que os recomendamos ir con tiempo.
@@ -17,32 +17,24 @@ const questions = [
     `,
   },
   {
-    title: "¿Cuál es el código de vestimenta?",
+    title: '¿Cuál es el código de vestimenta?',
     description: `
       <p>
         Ninguno, solo necesitamos que estés con nosotros celebrando, siempre y cuando no lleves un <strong>vestido largo blanco</strong>.
       </p>
     `,
   },
-];
+]
 ---
 
-<h2 class="font-gambarino text-5xl normal-case mb-14">
-  Posibles Preguntas y Respuestas
-</h2>
+<h2 class="font-gambarino mb-14 text-5xl normal-case">Posibles Preguntas y Respuestas</h2>
 
 {
   questions.map((question, index) => (
-    <Accordion
-      title={question.title}
-      description={question.description}
-      index={index}
-    />
+    <Accordion title={question.title} description={question.description} index={index} />
   ))
 }
 
-<div
-  class="inline-block rotate-2 border-[12px] border-white bg-[#f5eee4] my-24"
->
-  <img src="/images/cierre.webp" alt="Boda de María y Sergio" class="block w-72 md:w-96 h-auto" />
+<div class="my-24 inline-block rotate-2 border-[12px] border-white bg-[#f5eee4]">
+  <img src="/images/cierre.webp" alt="Boda de María y Sergio" class="block h-auto w-72 md:w-96" />
 </div>
