@@ -6,14 +6,72 @@ const questions = [
     title: '¿Dónde puedo aparcar?',
     description: `
       <p class="mb-4">
-        Os indicaremos las mejores opciones para aparcar cercanas a la iglesia. No es una zona fácil, así que os recomendamos ir con tiempo.
+        En caso de que vengáis en coche, no habrá problemas para aparcar en la finca,
+        pero sí puede ser un poco complicado aparcar en la iglesia.
       </p>
+
       <p class="mb-4">
-        Habrá una zona habilitada para los que necesiten bajarse del coche en la puerta de la iglesia.
+        Podéis acercaros hasta la puerta de la Iglesia con el coche para que niños,
+        gente mayor o gente con tacones no tenga que andar desde donde encontréis
+        sitio.
       </p>
-      <p>
-        En la finca hay <strong>parking libre y gratuito</strong> para todos.
+
+      <p class="mb-2">
+        Para aparcar, os recomendamos algunas zonas a 5 minutos que pueden estar
+        mejor:
       </p>
+
+      <ul class="ml-3 flex flex-col mb-4 list-inside list-disc text-left gap-2">
+        <li>
+          alrededores de la
+          <a
+            href="https://maps.app.goo.gl/E73N6p3c3pxXXzwU9"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline-offset-[3px] hover:underline font-bold"
+          >
+            calle San Cipriano
+          </a>
+          , es la calle más grande de Vicalvaro y aunque puede que no encontraréis en
+          esta misma avenida puede haber en las calles que desemboquen en esta.
+        </li>
+        <li>
+          <a
+            href="https://maps.app.goo.gl/ytbmsL7B7Vnm8qmz6"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline-offset-[3px] hover:underline font-bold m-min"
+          >
+            ⁠Avenida de la Aurora Boreal
+          </a>
+          , y zona baja De la Iglesia.
+        </li>
+        <li>
+          ⁠en la
+          <a
+            href="https://maps.app.goo.gl/7e3Ms5pAC44ad2Hn7"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline-offset-[3px] hover:underline font-bold"
+          >
+            ⁠calle Minerva
+          </a>
+          podéis buscar también, la zona más baja es la más cercana a la iglesia.
+        </li>
+        <li>
+          ⁠un poco más alejado, a 10 min De la Iglesia, está el
+          <a
+            href="https://maps.app.goo.gl/PgNYzgNmuRyUhTLb7?g_st=ipc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline-offset-[3px] hover:underline font-bold"
+          >
+            ⁠parking del cementerio
+          </a>
+          .
+        </li>
+      </ul>
+
     `,
   },
   {
@@ -38,3 +96,23 @@ const questions = [
 <div class="my-24 inline-block rotate-2 border-[12px] border-white bg-[#f5eee4]">
   <img src="/images/cierre.webp" alt="Boda de María y Sergio" class="block h-auto w-72 md:w-96" />
 </div>
+
+<script is:inline>
+  function toggleAccordion(index) {
+    const content = document.getElementById(`content-${index}`)
+    const chevronIcon = document.getElementById(`chevron-icon-${index}`)
+
+    if (!content || !chevronIcon) return
+
+    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px'
+
+    if (isOpen) {
+      content.style.maxHeight = '0'
+    } else {
+      content.style.maxHeight = content.scrollHeight + 'px'
+    }
+
+    chevronIcon.classList.toggle('rotate-0')
+    chevronIcon.classList.toggle('-rotate-180')
+  }
+</script>

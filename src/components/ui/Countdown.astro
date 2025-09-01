@@ -1,20 +1,69 @@
-<div class="font-gambarino flex justify-center gap-6 text-2xl md:text-3xl">
-  <div class="flex flex-col items-center">
+<div class="font-gambarino relative flex justify-center gap-6 text-2xl md:text-3xl">
+  <canvas
+    id="countdown-canvas"
+    class="h-300 absolute left-1/2 top-1/2 w-[calc(100vw-20px)] -translate-x-1/2 -translate-y-1/2"
+  ></canvas>
+  <div class="z-10 flex flex-col items-center">
     <span class="text-5xl font-bold" id="months">00</span>
     <span class="mt-1 text-xs uppercase tracking-wider">Meses</span>
   </div>
 
-  <span class="mt-2 text-xl font-bold">:</span>
+  <span class="z-10 mt-2 text-xl font-bold">:</span>
 
-  <div class="flex flex-col items-center">
+  <div class="z-10 flex flex-col items-center">
     <span class="text-5xl font-bold" id="days">00</span>
     <span class="mt-1 text-xs uppercase tracking-wider">Días</span>
   </div>
 
-  <span class="mt-2 text-xl font-bold">:</span>
+  <span class="z-10 mt-2 text-xl font-bold">:</span>
 
-  <div class="flex flex-col items-center">
+  <div class="z-10 flex flex-col items-center">
     <span class="text-5xl font-bold" id="hours">00</span>
     <span class="mt-1 text-xs uppercase tracking-wider">Horas</span>
   </div>
 </div>
+
+<script type="module">
+  import confetti from '/node_modules/canvas-confetti/dist/confetti.module.mjs'
+  const targetDate = new Date('2025-09-05T00:00:00')
+
+  function updateCountdown() {
+    const now = new Date()
+    const diff = targetDate - now
+
+    if (diff <= 0) {
+      document.addEventListener('DOMContentLoaded', function () {
+        var canvas = document.getElementById('countdown-canvas')
+
+        if (canvas) {
+          canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true })
+
+          setInterval(function () {
+            canvas.confetti({
+              spread: 150,
+              particleCount: 200,
+            })
+          }, 2000)
+        } else {
+          console.error('Canvas element with id "countdown-canvas" not found')
+        }
+      })
+
+      return
+    }
+
+    const totalHours = Math.floor(diff / (60 * 60 * 1000))
+    const totalDays = Math.floor(totalHours / 24)
+
+    const months = Math.floor(totalDays / 30.44)
+    const days = totalDays % Math.floor(30.44)
+    const hours = totalHours % 24
+
+    document.getElementById('months').textContent = String(months).padStart(2, '0')
+    document.getElementById('days').textContent = String(days).padStart(2, '0')
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0')
+  }
+
+  updateCountdown()
+  setInterval(updateCountdown, 1000)
+</script>

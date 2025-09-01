@@ -41,3 +41,25 @@ const phones = [
     ))
   }
 </div>
+
+<script is:inline>
+  window.copyToClipboard = () => {
+    const textEl = document.getElementById('iban-text')
+    const iban = textEl.textContent
+    const iconEl = document.getElementById('check-icon')
+
+    navigator.clipboard.writeText(iban).then(() => {
+      textEl.classList.remove('opacity-100')
+      textEl.classList.add('opacity-10')
+      iconEl.classList.remove('opacity-0')
+      iconEl.classList.add('opacity-100')
+
+      setTimeout(() => {
+        textEl.classList.remove('opacity-10')
+        textEl.classList.add('opacity-100')
+        iconEl.classList.remove('opacity-100')
+        iconEl.classList.add('opacity-0')
+      }, 2000)
+    })
+  }
+</script>
