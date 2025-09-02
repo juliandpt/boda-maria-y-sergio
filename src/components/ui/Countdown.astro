@@ -23,32 +23,34 @@
   </div>
 </div>
 
-<script type="module">
-  import confetti from '/node_modules/canvas-confetti/dist/confetti.module.mjs'
+<script>
+  import confetti from 'canvas-confetti'
+
   const targetDate = new Date('2025-09-05T00:00:00')
+  let timerEnd = false
+
+  function startConfetti(canvas) {
+    if (!canvas) return
+
+    canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true })
+    setInterval(() => {
+      canvas.confetti({
+        spread: 150,
+        particleCount: 200,
+      })
+    }, 2500)
+  }
 
   function updateCountdown() {
+    if (timerEnd) return
+
     const now = new Date()
     const diff = targetDate - now
 
     if (diff <= 0) {
-      document.addEventListener('DOMContentLoaded', function () {
-        var canvas = document.getElementById('countdown-canvas')
-
-        if (canvas) {
-          canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true })
-
-          setInterval(function () {
-            canvas.confetti({
-              spread: 150,
-              particleCount: 200,
-            })
-          }, 2000)
-        } else {
-          console.error('Canvas element with id "countdown-canvas" not found')
-        }
-      })
-
+      timerEnd = true
+      const canvas = document.getElementById('countdown-canvas')
+      startConfetti(canvas)
       return
     }
 
