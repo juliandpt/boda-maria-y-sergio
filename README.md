@@ -6,7 +6,7 @@
 </div>
 
 <div align="center">
-    <a href="https://bodonmaldochon.es" target="_blank">
+    <a href="https://boda-maria-y-sergio.vercel.app/" target="_blank">
         Website
     </a>
     <span>&nbsp;❖&nbsp;</span>
@@ -34,10 +34,6 @@
 
 </div>
 
-> [!WARNING]
-> This page is a work in progress.
-> Needs to be updated with the latest information regarding the wedding celebration.
-
 ## ℹ️ About
 
 This website is designed as an informational page for the wedding celebration between María and Sergio. It includes:
@@ -58,6 +54,3 @@ This website is designed as an informational page for the wedding celebration be
 ## ✉️ Contact
 
 If you have any questions or comments, please feel free to contact me via [Twitter](https://twitter.com/depabloj) or [GitHub](https://github.com/juliandpt).
-
-
-
